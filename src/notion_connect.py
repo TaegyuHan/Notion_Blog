@@ -11,7 +11,7 @@ class NotionConnect:
     """
         노션 라이블러리 연결
     """
-    NOTION_KEY_FILE: str = f"./json/notion.json"
+    NOTION_KEY_FILE: str = f"../json/notion.json"
     NOTION_KEY: dict = None
     CLIENT: NotionClient = None
 
@@ -45,12 +45,6 @@ class NotionConnect:
         collection_block = cls.CLIENT.get_block(collection_page_url)
         return collection_block
 
-    # @staticmethod
-    # def get_children(block_id: str) -> None:
-    #     # print(block_id)
-    #     client = NotionClient(token_v2=cls.NOTION_KEY["token_v2"])
-    #     block = client.get_block(collection_page_url)
-    #     pass
 
 if __name__ == '__main__':
     # PAGE_URL = "https://www.notion.so/d2094f33336f4139af28bd5ba51af92b"
